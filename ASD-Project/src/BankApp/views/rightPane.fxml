@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<fx:root type="javafx.scene.layout.VBox" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2">
+  <Label maxHeight="200.0" maxWidth="70.0" text="Placeholder for Bank right buttons" wrapText="true" />
+  <Button fx:id="exit" onAction="#exitApp" text="Exit">
+    <VBox.margin>
+      <Insets top="20.0" />
+    </VBox.margin>
+  </Button>
+</fx:root>

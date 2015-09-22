@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<fx:root type="javafx.scene.layout.VBox" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2">
+  <Label text="Placeholder for Bank main content" wrapText="true" />
+  <TableView prefHeight="200.0" prefWidth="200.0">
+    <columns>
+      <TableColumn prefWidth="75.0" text="Column X" />
+      <TableColumn prefWidth="75.0" text="Column X" />
+    </columns>
+  </TableView>
+</fx:root>

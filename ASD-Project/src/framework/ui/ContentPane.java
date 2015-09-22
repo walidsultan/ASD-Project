@@ -1,4 +1,4 @@
-package framework;
+package framework.ui;
 
 import java.io.IOException;
 
@@ -6,10 +6,10 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.layout.VBox;
 import javafx.fxml.FXML;
 
-public class RightPane extends VBox {
-	public RightPane() {
+public class ContentPane extends VBox {
+	public ContentPane() {
 		FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource(
-				"rightPane.fxml"));
+				"..\\..\\"+FinCo.AppName+"\\views\\contentPane.fxml"));
 
 		fxmlLoader.setRoot(this);
 		fxmlLoader.setController(this);

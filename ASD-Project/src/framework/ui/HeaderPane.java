@@ -1,4 +1,4 @@
-package framework;
+package framework.ui;
 
 import java.io.IOException;
 
@@ -10,10 +10,12 @@ import javafx.scene.layout.HBox;
 public class HeaderPane extends HBox {
 	public HeaderPane() {
 		FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource(
-				"headerPane.fxml"));
+				"..\\..\\"+FinCo.AppName+"\\views\\headerPane.fxml"));
 
 		fxmlLoader.setRoot(this);
 		fxmlLoader.setController(this);
+		
+		System.out.print(System.getProperty("user.dir"));
 		try {
 			fxmlLoader.load();
 		} catch (IOException exception) {
