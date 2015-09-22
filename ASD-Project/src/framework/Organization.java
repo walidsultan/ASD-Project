@@ -1,5 +1,5 @@
 package framework;
 
-public class Organization extends Party implements IOrganization {
+public class Organization extends Customer implements IOrganization {
 
 }

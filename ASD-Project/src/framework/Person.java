@@ -1,5 +1,5 @@
 package framework;
 
-public class Person extends Party implements IParty{
+public class Person extends Customer implements ICustomer{
 
 }
