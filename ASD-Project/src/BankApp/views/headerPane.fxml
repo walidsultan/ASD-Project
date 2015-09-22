@@ -6,6 +6,8 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.control.Button?>
 
-<fx:root type="javafx.scene.layout.HBox" xmlns:fx="http://javafx.com/fxml"> 
-      <Label layoutX="0.0" layoutY="0.0" text="Placeholder for Bank Header buttons" />
+<fx:root type="javafx.scene.layout.HBox" xmlns:fx="http://javafx.com/fxml" > 
+     <Button fx:id="btnAddPersonalAccount" text="Add Personal Account" onAction="#addPersonalAccount"></Button>
+     <Button fx:id="btnAddCompanyAccount" text="Add Company Account"></Button>
+     <Button fx:id="btnAddCompanyAccount" text="Add Interest"></Button>
 </fx:root>

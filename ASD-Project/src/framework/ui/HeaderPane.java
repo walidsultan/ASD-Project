@@ -2,6 +2,7 @@ package framework.ui;
 
 import java.io.IOException;
 
+import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
@@ -14,12 +15,11 @@ public class HeaderPane extends HBox {
 
 		fxmlLoader.setRoot(this);
 		fxmlLoader.setController(this);
-		
-		System.out.print(System.getProperty("user.dir"));
 		try {
 			fxmlLoader.load();
 		} catch (IOException exception) {
 			throw new RuntimeException(exception);
 		}
 	}
+	
 }

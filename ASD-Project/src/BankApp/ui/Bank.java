@@ -1,5 +1,7 @@
 package BankApp.ui;
 
+import BankApp.controllers.BankMainController;
+import framework.BaseController;
 import framework.ui.FinCo;
 
 public class Bank extends FinCo {
@@ -13,4 +15,9 @@ public class Bank extends FinCo {
 		launch(args);
 	}
 
+	@Override
+	public BaseController getController()
+	{
+		return new BankMainController();
+	}
 }

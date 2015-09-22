@@ -1,5 +1,7 @@
 package framework.ui;
 
+import framework.BaseController;
+import framework.MainController;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -12,8 +14,10 @@ public class FinCo extends Application {
 	public void start(Stage primaryStage) {
 		try {
 			FXMLLoader myLoader = new FXMLLoader(getClass().getResource("..\\..\\framework\\Views\\MainLayout.fxml"));
+			BaseController controller= getController();
+			myLoader.setController(controller);
 			Parent loadScreen = (Parent) myLoader.load();
-			
+		
 			Scene scene = new Scene(loadScreen,600,400);
 			primaryStage.setScene(scene);
 			primaryStage.show();
@@ -24,6 +28,11 @@ public class FinCo extends Application {
 		} catch(Exception e) {
 			e.printStackTrace();
 		}
+	}
+	
+	public BaseController getController()
+	{
+		return new MainController();
 	}
 	
 	public String getAppTitle() {
