@@ -2,7 +2,7 @@ package BankApp.ui;
 
 import java.io.IOException;
 
-import BankApp.controllers.DialogController;
+import BankApp.controllers.AccountController;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
@@ -28,8 +28,8 @@ public class BankHeaderPane extends HeaderPane {
 		Stage dialog = new Stage();
 		dialog.initStyle(StageStyle.UTILITY);
 		FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource(
-				"..\\..\\BankApp\\views\\AddPersonalAccountDialog.fxml"));
-		fxmlLoader.setController(new DialogController(customer));
+				"..\\..\\BankApp\\views\\AddAccountDialog.fxml"));
+		fxmlLoader.setController(new AccountController(customer));
 		
 		Scene scene = new Scene(fxmlLoader.load());
 		dialog.setTitle(title);
