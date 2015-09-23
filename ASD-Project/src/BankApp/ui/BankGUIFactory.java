@@ -13,4 +13,9 @@ public class BankGUIFactory extends GUIFactory {
 	public Node getContentPane() {
 		return BankContentPane.getInstance();
 	}
+	
+	@Override
+	public Node getRightPane() {
+		return new BankRightPane();
+	}
 }

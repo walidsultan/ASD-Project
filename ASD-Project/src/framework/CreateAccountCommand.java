@@ -9,7 +9,7 @@ public class CreateAccountCommand implements ICommand {
 
 	@Override
 	public void execute() {
-		State.Accounts.add(_Account);
+		State.getInstance().getAccounts().add(_Account);
 	}
 
 }

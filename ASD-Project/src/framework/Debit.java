@@ -1,5 +1,5 @@
 package framework;
 
-public abstract class Debit {
+public abstract class Debit extends Transaction {
 
 }
