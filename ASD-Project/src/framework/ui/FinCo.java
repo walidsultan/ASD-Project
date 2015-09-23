@@ -18,7 +18,7 @@ public class FinCo extends Application {
 			myLoader.setController(controller);
 			Parent loadScreen = (Parent) myLoader.load();
 		
-			Scene scene = new Scene(loadScreen,600,400);
+			Scene scene = new Scene(loadScreen,650,400);
 			primaryStage.setScene(scene);
 			primaryStage.show();
 		

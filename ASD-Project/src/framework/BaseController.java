@@ -1,5 +1,7 @@
 package framework;
 
-public class BaseController {
+import framework.ui.IGUIFactory;
 
+public interface BaseController {
+	public IGUIFactory getGUIFactory();
 }

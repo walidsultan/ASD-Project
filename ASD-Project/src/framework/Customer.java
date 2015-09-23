@@ -1,5 +1,8 @@
 package framework;
 
+import javafx.beans.property.SimpleStringProperty;
+import javafx.beans.property.StringProperty;
+
 public abstract class Customer {
 	private String name;
 	private String street;
@@ -45,5 +48,13 @@ public abstract class Customer {
 
 	public void setZip(String zip) {
 		this.zip = zip;
+	}
+
+	public StringProperty getNameProperty() {
+		return new SimpleStringProperty(this.name);
+	}
+	
+	public StringProperty getCityProperty() {
+		return new SimpleStringProperty(this.city);
 	}
 }
