@@ -1,5 +1,7 @@
 package framework;
 
+import java.util.List;
+
 public interface ICustomer {
 	public String getName();
 
@@ -20,4 +22,8 @@ public interface ICustomer {
 	public String getZip();
 
 	public void setZip(String zip);
+	
+	public void onTransactionChange();
+	
+	
 }

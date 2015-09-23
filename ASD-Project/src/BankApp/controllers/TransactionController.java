@@ -6,12 +6,16 @@ import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
+import BankApp.commands.TransactionCommand;
 import BankApp.models.BankAccount;
 import BankApp.ui.BankContentPane;
+import framework.CommandManager;
 import framework.IAccount;
+import framework.ICommand;
 import framework.IEntry;
+import framework.MainController;
 
-public class TransactionController {
+public class TransactionController extends MainController{
 	private IEntry entry;
 	private BankAccount account;
 
@@ -45,9 +49,9 @@ public class TransactionController {
 
 	@FXML
 	private void Submit() {
-
-		this.entry.setAmount(Double.parseDouble(txtAmount.getText()));
-		this.account.addEntry(this.entry);
+		ICommand transactionCommand= new TransactionCommand(this.account, this.entry,Double.parseDouble(txtAmount.getText()));
+		CommandManager.getInstance().submit(transactionCommand);
+		
 		// Notify content pane with the changes
 		BankContentPane.getInstance().update();
 

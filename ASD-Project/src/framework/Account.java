@@ -32,10 +32,13 @@ public abstract class Account implements IAccount {
 	{
 		this._Entries.add(entry);
 		this.amount = entry.compute(this.amount);
+		notifyCustomer();
 	}
 
 	public SimpleStringProperty getAmountProperty() {
 		return new SimpleStringProperty(Double.toString(this.amount));
 	}
+	
+	public abstract void notifyCustomer();
 	
 }

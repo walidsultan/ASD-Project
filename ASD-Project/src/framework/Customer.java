@@ -1,5 +1,8 @@
 package framework;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.property.StringProperty;
 
@@ -9,7 +12,11 @@ public abstract class Customer implements ICustomer {
 	private String city;
 	private String state;
 	private String zip;
-
+	public List<IEntry> allEntries;
+	
+	public Customer(){
+		this.allEntries = new ArrayList<IEntry>();
+	}
 	public String getName() {
 		return name;
 	}

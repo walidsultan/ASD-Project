@@ -10,4 +10,12 @@ public class Organization extends Customer implements IOrganization {
 	public void setNumberOfEmployees(String numberOfEmployees) {
 		this.numberOfEmployees = numberOfEmployees;
 	}
+
+	@Override
+	public void onTransactionChange() {
+
+		//Always send email to customer
+		System.out.println("Send email to " + this.getName());
+
+	}
 }

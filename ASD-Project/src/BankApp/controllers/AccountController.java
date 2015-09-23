@@ -8,6 +8,7 @@ import framework.CreateAccountCommand;
 import framework.IAccount;
 import framework.ICommand;
 import framework.ICustomer;
+import framework.MainController;
 import framework.Organization;
 import framework.Person;
 import javafx.fxml.FXML;
@@ -18,7 +19,7 @@ import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 
-public class AccountController {
+public class AccountController extends MainController {
 	@FXML
 	private Button btnCancel;
 

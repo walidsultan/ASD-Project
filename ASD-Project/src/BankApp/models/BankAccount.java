@@ -11,9 +11,6 @@ public abstract class BankAccount extends Account {
 		this.setAccountNumber(accountNumber);
 	}
 
-	public void AddInterest() {
-
-	}
 
 	public String getAccountNumber() {
 		return accountNumber;
@@ -21,5 +18,10 @@ public abstract class BankAccount extends Account {
 
 	public void setAccountNumber(String accountNumber) {
 		this.accountNumber = accountNumber;
+	}
+	
+	@Override
+	public void notifyCustomer() {
+		this.getCustomer().notify();
 	}
 }
