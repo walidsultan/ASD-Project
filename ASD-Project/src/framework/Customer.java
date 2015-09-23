@@ -12,11 +12,12 @@ public abstract class Customer implements ICustomer {
 	private String city;
 	private String state;
 	private String zip;
-	public List<IEntry> allEntries;
-	
-	public Customer(){
-		this.allEntries = new ArrayList<IEntry>();
+	public List<IAccount> allAccounts;
+
+	public Customer() {
+		this.allAccounts = new ArrayList<IAccount>();
 	}
+
 	public String getName() {
 		return name;
 	}
@@ -57,10 +58,14 @@ public abstract class Customer implements ICustomer {
 		this.zip = zip;
 	}
 
+	public void addAccount(IAccount account) {
+		this.allAccounts.add(account);
+	}
+
 	public StringProperty getNameProperty() {
 		return new SimpleStringProperty(this.name);
 	}
-	
+
 	public StringProperty getCityProperty() {
 		return new SimpleStringProperty(this.city);
 	}

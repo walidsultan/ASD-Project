@@ -34,6 +34,10 @@ public abstract class Account implements IAccount {
 		this.amount = entry.compute(this.amount);
 		notifyCustomer();
 	}
+	
+	public List<IEntry> getAllEntries(){
+		return this._Entries;
+	}
 
 	public SimpleStringProperty getAmountProperty() {
 		return new SimpleStringProperty(Double.toString(this.amount));

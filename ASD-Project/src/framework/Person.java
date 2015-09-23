@@ -12,10 +12,8 @@ public class Person extends Customer implements ICustomer {
 	}
 
 	@Override
-	public void onTransactionChange() {
-		//Get last transaction
-		IEntry entry= this.allEntries.get(this.allEntries.size()-1);
-		if(entry.getAmount()>500 || entry.getAmount()<0){
+	public void onTransactionChange(IAccount account, IEntry entry) {
+			if(entry.getAmount()>500 || account.getAmount()<0){
 			//Send email
 			System.out.println("Send email to " + this.getName());
 		}

@@ -12,7 +12,7 @@ public class Organization extends Customer implements IOrganization {
 	}
 
 	@Override
-	public void onTransactionChange() {
+	public void onTransactionChange(IAccount account, IEntry entry) {
 
 		//Always send email to customer
 		System.out.println("Send email to " + this.getName());

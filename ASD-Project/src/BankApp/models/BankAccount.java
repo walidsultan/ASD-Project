@@ -2,6 +2,7 @@ package BankApp.models;
 
 import framework.Account;
 import framework.ICustomer;
+import framework.IEntry;
 
 public abstract class BankAccount extends Account {
 	private String accountNumber;
@@ -22,6 +23,8 @@ public abstract class BankAccount extends Account {
 	
 	@Override
 	public void notifyCustomer() {
-		this.getCustomer().notify();
+		//Get last entry
+		IEntry entry = this.getAllEntries().get(this.getAllEntries().size()-1);
+		this.getCustomer().onTransactionChange(this,entry);
 	}
 }

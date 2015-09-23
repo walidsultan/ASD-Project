@@ -16,4 +16,6 @@ public interface IEntry {
 	void setDetails(String details);
 
 	double compute(double totalAmount);
+	
+	
 }

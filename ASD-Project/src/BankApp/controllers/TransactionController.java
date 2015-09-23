@@ -10,7 +10,6 @@ import BankApp.commands.TransactionCommand;
 import BankApp.models.BankAccount;
 import BankApp.ui.BankContentPane;
 import framework.CommandManager;
-import framework.IAccount;
 import framework.ICommand;
 import framework.IEntry;
 import framework.MainController;

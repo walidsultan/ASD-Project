@@ -1,8 +1,8 @@
 package BankApp.models;
 
-import framework.Credit;
+import framework.Transaction;
 
-public class Deposit extends Credit {
+public class Deposit extends Transaction {
 
 	@Override
 	public double compute(double totalAmount) {

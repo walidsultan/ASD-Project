@@ -23,7 +23,7 @@ public interface ICustomer {
 
 	public void setZip(String zip);
 	
-	public void onTransactionChange();
+	public void onTransactionChange(IAccount account, IEntry entry);
 	
 	
 }
