@@ -1,9 +1,11 @@
 package CreditCard.ui;
 
 import java.util.ArrayList;
+import java.util.regex.Pattern;
 
 import BankApp.models.BankAccount;
 import BankApp.models.SavingsAccount;
+import CreditCard.models.CreditCardAccount;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.collections.FXCollections;
 import javafx.fxml.FXML;
@@ -39,14 +41,16 @@ public class CreditCardContentPane extends ContentPane {
 	private TableColumn<IAccount, String> nameCol;
 
 	@FXML
-	private TableColumn<IAccount, String> ccNumberCol;
+	private TableColumn<CreditCardAccount, String> ccNumberCol;
 
 	@FXML
-	private TableColumn<IAccount, String> expDateCol;
+	private TableColumn<CreditCardAccount, String> expDateCol;
+
+	@FXML
+	private TableColumn<CreditCardAccount, String> typeCol;
 
 	@FXML
 	private TableColumn<IAccount, String> balanceCol;
-
 
 	public TableView<IAccount> getAccountsTV() {
 		return tblAccounts;
@@ -57,13 +61,24 @@ public class CreditCardContentPane extends ContentPane {
 		nameCol.setCellValueFactory(cellData -> ((Customer) cellData.getValue()
 				.getCustomer()).getNameProperty());
 
+		balanceCol.setCellValueFactory(cellData -> ((Account) cellData
+				.getValue()).getAmountProperty());
+
+		ccNumberCol.setCellValueFactory(cellData -> new SimpleStringProperty(
+				((CreditCardAccount) cellData.getValue()).getCCNumber()));
+
+		expDateCol.setCellValueFactory(cellData -> new SimpleStringProperty(
+				((CreditCardAccount) cellData.getValue()).getExpDate()));
 		
+		typeCol.setCellValueFactory(cellData -> new SimpleStringProperty(
+				cellData.getValue().getClass().getName().split(Pattern.quote("."))[2]));
 	}
 
 	public void update() {
-		tblAccounts.getItems().removeAll(FXCollections.observableArrayList(State
-				.getInstance().getAccounts()));
-		
+		tblAccounts.getItems().removeAll(
+				FXCollections.observableArrayList(State.getInstance()
+						.getAccounts()));
+
 		tblAccounts.setItems(FXCollections.observableArrayList(State
 				.getInstance().getAccounts()));
 	}

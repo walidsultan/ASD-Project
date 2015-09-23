@@ -2,6 +2,7 @@ package CreditCard.controllers;
 
 
 import CreditCard.models.Bronze;
+import CreditCard.models.CreditCardAccount;
 import CreditCard.models.Gold;
 import CreditCard.models.Silver;
 import CreditCard.ui.CreditCardContentPane;
@@ -103,7 +104,7 @@ public class AccountController extends MainController {
 		customer.setStreet(txtStreet.getText());
 		customer.setZip(txtZip.getText());
 
-		IAccount account;
+		CreditCardAccount account;
 		if (goldRB.isSelected()) {
 			account = new Gold(customer);
 		} else if (silverRB.isSelected()){
@@ -112,6 +113,9 @@ public class AccountController extends MainController {
 		{
 			account = new Bronze(customer);
 		}
+
+		account.setCCNumber(txtCCNumber.getText());
+		account.setExpDate(txtExpDate.getText());
 
 //		if (isPerson) {
 //			((Person) customer).setBirthDate(txtBirthDate.getText());
