@@ -1,13 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import java.lang.*?>
+<?import javafx.geometry.*?>
 <?import javafx.scene.control.*?>
+<?import javafx.scene.control.Button?>
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.control.Button?>
 
-<fx:root type="javafx.scene.layout.HBox" xmlns:fx="http://javafx.com/fxml" > 
-     <Button fx:id="btnAddPersonalAccount" text="Add Personal Account" onAction="#addPersonalAccount"></Button>
-     <Button fx:id="btnAddCompanyAccount" text="Add Company Account"></Button>
-     <Button fx:id="btnAddCompanyAccount" text="Add Interest"></Button>
+<fx:root type="javafx.scene.layout.HBox" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2">
+  <Button fx:id="btnAddPersonalAccount" onAction="#addPersonalAccount" text="Add Personal Account" />
+  <Button fx:id="btnAddCompanyAccount" text="Add Company Account">
+    <HBox.margin>
+      <Insets left="10.0" fx:id="x1" />
+    </HBox.margin>
+  </Button>
+  <Button fx:id="btnAddCompanyAccount" text="Add Interest" HBox.margin="$x1" />
 </fx:root>

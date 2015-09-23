@@ -7,7 +7,7 @@ import framework.ui.RightPane;
 import javafx.fxml.FXML;
 import javafx.scene.layout.GridPane;
 
-public class MainController extends BaseController {
+public class MainController implements BaseController {
 	@FXML
 	private GridPane mainGrid;
 
