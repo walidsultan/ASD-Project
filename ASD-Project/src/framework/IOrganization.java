@@ -1,5 +1,5 @@
 package framework;
 
-public interface IOrganization {
+public interface IOrganization extends ICustomer {
 
 }

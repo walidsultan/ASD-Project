@@ -6,7 +6,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane fx:id="dialogAnchor" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="BankApp.controllers.DialogController">
+<AnchorPane fx:id="dialogAnchor" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2">
   <!-- TODO Add Nodes -->
   <children>
     <GridPane layoutY="0.0" prefHeight="375.0" AnchorPane.leftAnchor="20.0">
@@ -23,9 +23,13 @@
         <TextField fx:id="txtState" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="5" />
         <Label text="Zip" GridPane.columnIndex="0" GridPane.halignment="CENTER" GridPane.rowIndex="6" />
         <TextField fx:id="txtZip" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="6" />
-        <Label text="BirthDate" GridPane.columnIndex="0" GridPane.halignment="CENTER" GridPane.rowIndex="7" />
+        <Label fx:id="lblBirthDate" text="BirthDate" GridPane.columnIndex="0" GridPane.halignment="CENTER" GridPane.rowIndex="7" />
         <TextField fx:id="txtBirthDate" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="7" />
-        <Label text="Email" GridPane.columnIndex="0" GridPane.halignment="CENTER" GridPane.rowIndex="8" />
+        
+        <Label fx:id="lblNoOfEmployees" text="No of Employees" GridPane.columnIndex="0" GridPane.halignment="CENTER" GridPane.rowIndex="7" />
+        <TextField fx:id="txtNoOfEmployees" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+        
+        <Label  text="Email" GridPane.columnIndex="0" GridPane.halignment="CENTER" GridPane.rowIndex="8" />
         <TextField fx:id="txtEMail" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="8" />
         <RadioButton mnemonicParsing="false" text="Checking" GridPane.columnIndex="1" GridPane.rowIndex="0" fx:id="checkingRB">
           <toggleGroup>

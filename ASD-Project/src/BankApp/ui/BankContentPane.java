@@ -1,18 +1,14 @@
 package BankApp.ui;
 
-import java.util.Observable;
-
 import BankApp.models.BankAccount;
 import BankApp.models.SavingsAccount;
-import javafx.beans.InvalidationListener;
 import javafx.beans.property.SimpleStringProperty;
-import javafx.beans.value.ChangeListener;
-import javafx.beans.value.ObservableStringValue;
 import javafx.collections.FXCollections;
 import javafx.fxml.FXML;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
+import framework.Customer;
 import framework.IAccount;
 import framework.Person;
 import framework.State;
@@ -59,10 +55,10 @@ public class BankContentPane extends ContentPane {
 				.setCellValueFactory(new PropertyValueFactory<IAccount, String>(
 						"accountNumber"));
 
-		nameCol.setCellValueFactory(cellData -> ((Person) cellData.getValue()
+		nameCol.setCellValueFactory(cellData -> ((Customer) cellData.getValue()
 				.getCustomer()).getNameProperty());
 
-		cityCol.setCellValueFactory(cellData -> ((Person) cellData.getValue()
+		cityCol.setCellValueFactory(cellData -> ((Customer) cellData.getValue()
 				.getCustomer()).getCityProperty());
 
 		amountCol

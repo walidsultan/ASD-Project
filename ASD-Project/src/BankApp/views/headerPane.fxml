@@ -9,10 +9,10 @@
 
 <fx:root type="javafx.scene.layout.HBox" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2">
   <Button fx:id="btnAddPersonalAccount" onAction="#addPersonalAccount" text="Add Personal Account" />
-  <Button fx:id="btnAddCompanyAccount" text="Add Company Account">
+  <Button fx:id="btnAddCompanyAccount" onAction="#addCompanyAccount" text="Add Company Account">
     <HBox.margin>
       <Insets left="10.0" fx:id="x1" />
     </HBox.margin>
   </Button>
-  <Button fx:id="btnAddCompanyAccount" text="Add Interest" HBox.margin="$x1" />
+  <Button fx:id="btnAddInterest" text="Add Interest" HBox.margin="$x1" />
 </fx:root>

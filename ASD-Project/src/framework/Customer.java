@@ -3,7 +3,7 @@ package framework;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.property.StringProperty;
 
-public abstract class Customer {
+public abstract class Customer implements ICustomer {
 	private String name;
 	private String street;
 	private String city;
