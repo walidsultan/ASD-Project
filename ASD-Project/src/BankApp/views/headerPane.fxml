@@ -14,5 +14,5 @@
       <Insets left="10.0" fx:id="x1" />
     </HBox.margin>
   </Button>
-  <Button fx:id="btnAddInterest" text="Add Interest" HBox.margin="$x1" />
+  <Button fx:id="btnAddInterest" text="Add Interest" HBox.margin="$x1" onAction="#addInterest"/>
 </fx:root>
