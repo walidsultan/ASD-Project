@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<fx:root type="javafx.scene.layout.HBox" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2">
+  <Button fx:id="btnAddCreditCardAccount" onAction="#addCreditCardAccount" text="Add Credit-Card Account" />
+  <Button fx:id="btnGenerateMonthlyBills" onAction="#generateMonthlyBills" text="Generate Monthly Bills">
+    <HBox.margin>
+      <Insets left="10.0" fx:id="x1" />
+    </HBox.margin>
+  </Button>
+</fx:root>

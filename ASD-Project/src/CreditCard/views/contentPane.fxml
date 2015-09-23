@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<fx:root type="javafx.scene.layout.VBox" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2">
+  <TableView fx:id="tblAccounts" prefHeight="200.0" prefWidth="450.0">
+    <columns>
+      <TableColumn prefWidth="90" text="Name" fx:id="nameCol" />
+      <TableColumn prefWidth="90" text="CC Number" fx:id="ccNumberCol"/>
+      <TableColumn prefWidth="90" text="Exp Date" fx:id="expDateCol"/>
+      <TableColumn prefWidth="90" text="Type" fx:id="typeCol"/>
+      <TableColumn prefWidth="90" text="Balance" fx:id="balanceCol" />
+    </columns>
+    <VBox.margin>
+      <Insets top="20.0" />
+    </VBox.margin>
+  </TableView>
+</fx:root>
