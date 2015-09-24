@@ -2,6 +2,7 @@ package BankApp.controllers;
 
 import BankApp.models.BankCustomer;
 import BankApp.models.CheckingAccount;
+import BankApp.models.Company;
 import BankApp.models.SavingsAccount;
 import BankApp.ui.BankContentPane;
 import framework.CommandManager;
@@ -114,9 +115,9 @@ public class AccountController extends MainController {
 		}
 
 		if (isPerson) {
-			((Person) customer).setBirthDate(txtBirthDate.getText());
+			((BankCustomer) customer).setBirthDate(txtBirthDate.getText());
 		} else {
-			((Organization) customer).setNumberOfEmployees(txtNoOfEmployees
+			((Company) customer).setNumberOfEmployees(txtNoOfEmployees
 					.getText());
 		}
 

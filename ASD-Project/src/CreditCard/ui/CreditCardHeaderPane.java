@@ -3,6 +3,7 @@ package CreditCard.ui;
 import java.io.IOException;
 
 import CreditCard.controllers.AccountController;
+import CreditCard.controllers.MonthlyBillsController;
 import CreditCard.models.CreditCardCustomer;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -20,8 +21,8 @@ public class CreditCardHeaderPane extends HeaderPane {
 	}
 
 	@FXML
-	private void generateMonthlyBills(){
-		
+	private void generateMonthlyBills() throws IOException {
+		showMonthlyBillsDialog();
 	}
 
 	private void showAccountDialog(ICustomer customer, String title)
@@ -34,6 +35,19 @@ public class CreditCardHeaderPane extends HeaderPane {
 
 		Scene scene = new Scene(fxmlLoader.load());
 		dialog.setTitle(title);
+		dialog.setScene(scene);
+		dialog.show();
+	}
+
+	private void showMonthlyBillsDialog() throws IOException {
+		Stage dialog = new Stage();
+		dialog.initStyle(StageStyle.UTILITY);
+		FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource(
+				"..\\..\\CreditCard\\views\\MonthlyBillsDialog.fxml"));
+		fxmlLoader.setController(new MonthlyBillsController());
+
+		Scene scene = new Scene(fxmlLoader.load());
+		dialog.setTitle("Monthly Bills Report");
 		dialog.setScene(scene);
 		dialog.show();
 	}

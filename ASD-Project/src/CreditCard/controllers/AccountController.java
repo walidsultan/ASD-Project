@@ -75,17 +75,7 @@ public class AccountController extends MainController {
 	
 	@FXML
 	private void initialize(){
-//		if (isPerson) {
-//			txtBirthDate.visibleProperty().set(true);
-//			lblBirthDate.visibleProperty().set(true);
-//			txtNoOfEmployees.visibleProperty().set(false);
-//			lblNoOfEmployees.visibleProperty().set(false);
-//		} else {
-//			txtBirthDate.visibleProperty().set(false);
-//			lblBirthDate.visibleProperty().set(false);
-//			txtNoOfEmployees.visibleProperty().set(true);
-//			lblNoOfEmployees.visibleProperty().set(true);
-//		}
+
 	}
 
 	@FXML
@@ -117,12 +107,6 @@ public class AccountController extends MainController {
 		account.setCCNumber(txtCCNumber.getText());
 		account.setExpDate(txtExpDate.getText());
 
-//		if (isPerson) {
-//			((Person) customer).setBirthDate(txtBirthDate.getText());
-//		} else {
-//			((Organization) customer).setNumberOfEmployees(txtNoOfEmployees
-//					.getText());
-//		}
 
 		ICommand createAccountCommand = new CreateAccountCommand(account);
 		CommandManager.getInstance().submit(createAccountCommand);

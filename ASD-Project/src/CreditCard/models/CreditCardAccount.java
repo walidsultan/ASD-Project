@@ -36,4 +36,7 @@ public abstract class CreditCardAccount extends Account {
 	public void setExpDate(String expDate) {
 		ExpDate = expDate;
 	}
+
+	public abstract double getMonthlyIntrestRate();
+	public abstract double getMinimumPayment();
 }

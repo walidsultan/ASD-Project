@@ -1,5 +1,7 @@
 package framework;
 
+import java.util.List;
+
 public interface IAccount {
 	ICustomer getCustomer();
 
@@ -8,4 +10,6 @@ public interface IAccount {
 	void setAmount(double amount);
 
 	void addEntry(IEntry entry);
+	
+	public List<IEntry> getAllEntries();
 }

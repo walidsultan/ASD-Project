@@ -6,9 +6,16 @@ public class Bronze extends CreditCardAccount {
 
 	public Bronze(ICustomer customer) {
 		super(customer);
-		// TODO Auto-generated constructor stub
 	}
 
+	@Override
+	public double getMonthlyIntrestRate() {
+		return 0.1;
+	}
 
+	@Override
+	public double getMinimumPayment() {
+		return 0.14;
+	}
 
 }

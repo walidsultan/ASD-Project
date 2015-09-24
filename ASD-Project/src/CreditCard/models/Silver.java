@@ -6,7 +6,18 @@ public class Silver extends CreditCardAccount{
 
 	public Silver(ICustomer customer) {
 		super(customer);
-		// TODO Auto-generated constructor stub
+	}
+
+	@Override
+	public double getMonthlyIntrestRate() {
+		// TODO Auto-generated method stub
+		return 0.08;
+	}
+
+	@Override
+	public double getMinimumPayment() {
+		// TODO Auto-generated method stub
+		return 0.12;
 	}
 
 }
