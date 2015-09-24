@@ -3,6 +3,7 @@ package CreditCard.ui;
 import java.io.IOException;
 
 import CreditCard.controllers.AccountController;
+import CreditCard.models.CreditCardCustomer;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
@@ -10,13 +11,12 @@ import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 import framework.ui.HeaderPane;
 import framework.ICustomer;
-import framework.Person;
 
 public class CreditCardHeaderPane extends HeaderPane {
 
 	@FXML
 	private void addCreditCardAccount() throws IOException {
-		showAccountDialog(new Person(), "Add Credit-Card Account");
+		showAccountDialog(new CreditCardCustomer(), "Add Credit-Card Account");
 	}
 
 	@FXML

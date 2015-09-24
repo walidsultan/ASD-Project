@@ -11,8 +11,8 @@
   <children>
     <GridPane layoutY="0.0" prefHeight="165.0" AnchorPane.leftAnchor="20.0">
       <children>
-        <Label text="Acc Nr" GridPane.columnIndex="0" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
-        <Label fx:id="lblAccountNumber" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1"/>
+        <Label text="Name" GridPane.columnIndex="0" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
+        <Label fx:id="lblName" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1"/>
         <Label text="Amount" GridPane.columnIndex="0" GridPane.halignment="CENTER" GridPane.rowIndex="2" />
         <TextField fx:id="txtAmount" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
         

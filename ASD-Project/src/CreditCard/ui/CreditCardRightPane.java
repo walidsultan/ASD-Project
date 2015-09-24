@@ -2,10 +2,10 @@ package CreditCard.ui;
 
 import java.io.IOException;
 
-import BankApp.controllers.TransactionController;
-import BankApp.models.BankAccount;
-import BankApp.models.Deposit;
-import BankApp.models.Withdraw;
+import CreditCard.controllers.TransactionController;
+import CreditCard.models.Charge;
+import CreditCard.models.CreditCardAccount;
+import CreditCard.models.Deposit;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
@@ -20,7 +20,7 @@ import framework.ui.RightPane;
 public class CreditCardRightPane extends RightPane {
 	@FXML
 	private void charge() throws IOException {
-		showTransaction(new Withdraw(), "Charge");
+		showTransaction(new Charge(), "Charge");
 	}
 
 	@FXML
@@ -32,7 +32,7 @@ public class CreditCardRightPane extends RightPane {
 		int selectedIndex = CreditCardContentPane.getInstance().getAccountsTV()
 				.getSelectionModel().getSelectedIndex();
 		if (selectedIndex >= 0) {
-			BankAccount account = (BankAccount) CreditCardContentPane.getInstance()
+			CreditCardAccount account = (CreditCardAccount) CreditCardContentPane.getInstance()
 					.getAccountsTV().getItems().get(selectedIndex);
 			showTransactionDialog(account, entry, title);
 		} else {
@@ -44,7 +44,7 @@ public class CreditCardRightPane extends RightPane {
 		}
 	}
 
-	private void showTransactionDialog(BankAccount account, IEntry entry,
+	private void showTransactionDialog(CreditCardAccount account, IEntry entry,
 			String title) throws IOException {
 		Stage dialog = new Stage();
 		dialog.initModality(Modality.WINDOW_MODAL);

@@ -4,32 +4,28 @@ import java.io.IOException;
 
 import BankApp.commands.AddInterestCommand;
 import BankApp.controllers.AccountController;
-import BankApp.models.BankAccount;
+import BankApp.models.BankCustomer;
+import BankApp.models.Company;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 import framework.ui.HeaderPane;
-import framework.Account;
 import framework.CommandManager;
-import framework.IAccount;
 import framework.ICommand;
 import framework.ICustomer;
-import framework.Organization;
-import framework.Person;
-import framework.State;
 
 public class BankHeaderPane extends HeaderPane {
 
 	@FXML
 	private void addPersonalAccount() throws IOException {
-		showAccountDialog(new Person(), "Add Personal Account");
+		showAccountDialog(new BankCustomer(), "Add Personal Account");
 	}
 
 	@FXML
 	private void addCompanyAccount() throws IOException {
-		showAccountDialog(new Organization(), "Add Company Account");
+		showAccountDialog(new Company(), "Add Company Account");
 	}
 
 	@FXML

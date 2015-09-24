@@ -1,5 +1,6 @@
 package BankApp.controllers;
 
+import BankApp.models.BankCustomer;
 import BankApp.models.CheckingAccount;
 import BankApp.models.SavingsAccount;
 import BankApp.ui.BankContentPane;
@@ -71,7 +72,7 @@ public class AccountController extends MainController {
 	public AccountController(ICustomer customer) {
 		this.customer = customer;
 
-		isPerson = customer.getClass().equals(Person.class);
+		isPerson = customer.getClass().equals(BankCustomer.class);
 	}
 	
 	@FXML
