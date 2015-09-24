@@ -9,7 +9,7 @@ import javafx.fxml.FXML;
 public class RightPane extends VBox {
 	public RightPane() {
 		FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource(
-				"..\\..\\"+FinCo.AppName+"\\views\\rightPane.fxml"));
+				"../../"+FinCo.AppName+"/views/rightPane.fxml"));
 
 		fxmlLoader.setRoot(this);
 		fxmlLoader.setController(this);

@@ -11,7 +11,7 @@ import javafx.scene.layout.HBox;
 public class HeaderPane extends HBox {
 	public HeaderPane() {
 		FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource(
-				"..\\..\\"+FinCo.AppName+"\\views\\headerPane.fxml"));
+				"../../"+FinCo.AppName+"/views/headerPane.fxml"));
 
 		fxmlLoader.setRoot(this);
 		fxmlLoader.setController(this);

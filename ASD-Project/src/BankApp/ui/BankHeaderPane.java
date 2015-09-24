@@ -42,7 +42,7 @@ public class BankHeaderPane extends HeaderPane {
 		Stage dialog = new Stage();
 		dialog.initStyle(StageStyle.UTILITY);
 		FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource(
-				"..\\..\\BankApp\\views\\AddAccountDialog.fxml"));
+				"../../BankApp/views/AddAccountDialog.fxml"));
 		fxmlLoader.setController(new AccountController(customer));
 
 		Scene scene = new Scene(fxmlLoader.load());

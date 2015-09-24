@@ -30,7 +30,7 @@ public class CreditCardHeaderPane extends HeaderPane {
 		Stage dialog = new Stage();
 		dialog.initStyle(StageStyle.UTILITY);
 		FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource(
-				"..\\..\\CreditCard\\views\\AddAccountDialog.fxml"));
+				"../../CreditCard/views/AddAccountDialog.fxml"));
 		fxmlLoader.setController(new AccountController(customer));
 
 		Scene scene = new Scene(fxmlLoader.load());
@@ -43,7 +43,7 @@ public class CreditCardHeaderPane extends HeaderPane {
 		Stage dialog = new Stage();
 		dialog.initStyle(StageStyle.UTILITY);
 		FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource(
-				"..\\..\\CreditCard\\views\\MonthlyBillsDialog.fxml"));
+				"../../CreditCard/views/MonthlyBillsDialog.fxml"));
 		fxmlLoader.setController(new MonthlyBillsController());
 
 		Scene scene = new Scene(fxmlLoader.load());

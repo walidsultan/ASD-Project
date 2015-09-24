@@ -13,7 +13,7 @@ public class FinCo extends Application {
 	@Override
 	public void start(Stage primaryStage) {
 		try {
-			FXMLLoader myLoader = new FXMLLoader(getClass().getResource("..\\..\\framework\\Views\\MainLayout.fxml"));
+			FXMLLoader myLoader = new FXMLLoader(getClass().getResource("../../framework/Views/MainLayout.fxml"));
 			BaseController controller= getController();
 			myLoader.setController(controller);
 			Parent loadScreen = (Parent) myLoader.load();

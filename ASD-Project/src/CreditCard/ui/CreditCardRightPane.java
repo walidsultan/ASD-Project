@@ -50,7 +50,7 @@ public class CreditCardRightPane extends RightPane {
 		dialog.initModality(Modality.WINDOW_MODAL);
 		dialog.initStyle(StageStyle.UTILITY);
 		FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource(
-				"..\\..\\CreditCard\\views\\AddTransactionDialog.fxml"));
+				"../../CreditCard/views/AddTransactionDialog.fxml"));
 		fxmlLoader.setController(new TransactionController(account, entry));
 
 		Scene scene = new Scene(fxmlLoader.load());

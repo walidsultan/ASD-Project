@@ -9,7 +9,7 @@ import javafx.fxml.FXML;
 public class ContentPane extends VBox {
 	public ContentPane() {
 		FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource(
-				"..\\..\\"+FinCo.AppName+"\\views\\contentPane.fxml"));
+				"../../"+FinCo.AppName+"/views/contentPane.fxml"));
 
 		fxmlLoader.setRoot(this);
 		fxmlLoader.setController(this);
